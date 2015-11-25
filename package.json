@@ -1,0 +1,23 @@
+{
+  "name": "html-path-loader",
+  "version": "0.1.0",
+  "description": "auto replace namespace",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fex-team/html-path-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "loader"
+  ],
+  "author": "ascoder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fex-team/html-path-loader/issues"
+  },
+  "homepage": "https://github.com/fex-team/html-path-loader#readme"
+}
