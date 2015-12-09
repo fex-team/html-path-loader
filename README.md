@@ -4,7 +4,7 @@ css 模块化工具
 
 通过为每个 react 组件生成唯一的 className 值来实现 css 组件化
 
-此 loader 需要配合[css-path-loader](https://github.com/andycall/css-path-loader.git)一起使用才能生效
+此 loader 需要配合[css-path-loader](https://github.com/fex-team/css-path-loader.git)一起使用才能生效
 
 scss 文件或者 less 文件必须和 react 组件文件必须放置在同一目录下,
 
