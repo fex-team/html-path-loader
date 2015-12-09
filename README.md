@@ -2,7 +2,7 @@ html-path-loader
 ========================
 css 模块化工具 
 
-通过为每个 react 组件生成唯一的 className 名称来实现 css 组件化
+通过为每个 react 组件生成唯一的 className 值来实现 css 组件化
 
 此 loader 需要配合[css-path-loader](https://github.com/andycall/css-path-loader.git)一起使用才能生效
 
