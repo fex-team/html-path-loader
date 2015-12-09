@@ -1,6 +1,6 @@
 {
   "name": "html-path-loader",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "auto replace namespace",
   "main": "index.js",
   "scripts": {
