@@ -13,7 +13,7 @@ module.exports = function (source, map) {
     if (Object.prototype.toString.call(this.options.entry) === '[object Array]') {
         for (var value of this.options.entry) {
             if (/[a-zA-Z-\.\/]+(js|jsx)$/.test(value)) {
-                var entryPath = path.resolve(this.options.context + '/' + value)
+                var entryPath = path.resolve(this.options.context + path.sep + value)
                 if (entryPath === this.resourcePath) {
                     this.callback(null, source, map)
                     return false;
@@ -23,16 +23,19 @@ module.exports = function (source, map) {
     }
 
     // 得到了入口文件的绝对位置
-    var entryAbsolutePath = this.options.context + '/'
+    var entryAbsolutePath = this.options.context + path.sep
 
     // 得到入口文件文件夹路径
-    var entryAbsoluteFolderPathArray = entryAbsolutePath.split('/')
+    var entryAbsoluteFolderPathArray = entryAbsolutePath.split(path.sep)
     entryAbsoluteFolderPathArray.pop()
 
-    var namespace = this.resourcePath.replace(entryAbsoluteFolderPathArray.join('/') + '/', '').replace(/\.(js|jsx)/, '')
+    var namespace = this.resourcePath.replace(entryAbsoluteFolderPathArray.join(path.sep) + path.sep, '').replace(/\.(js|jsx)/, '')
 
-    var nameArray = namespace.split('/')
+    var nameArray = namespace.split(path.sep)
     nameArray.pop()
+    for(var i=0; i<nameArray.length; i++) {
+        nameArray[i] = nameArray[i].replace('-' , '_')
+    }
     var nameStr = nameArray.join('-')
 
     // 匹配 namespace
